@@ -1,0 +1,116 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manual Entry"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:paddingTop="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src = "@drawable/ic_baseline_person_24"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal|center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/activityPerformed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the activity performed"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/actvityDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your duration of the activity"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calories Lost (cal)"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/activityCaloriesLost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the calories lost"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heart Rate"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/activityHeartRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the heart rate"
+            android:inputType="number"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:onClick="onManualEntrySaveClicked"
+                android:layout_marginRight="20dp"
+                android:minWidth="125dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:onClick="onManualEntryCancelClicked"
+                android:layout_marginLeft="20dp"
+                android:minWidth="125dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
