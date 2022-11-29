@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:text = "Website"
         android:onClick="onWebsiteClick"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/white"
         android:textColor="@color/black"/>
 
@@ -28,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onIdeaPitchClick"
+        android:layout_marginTop="20dp"
         android:text = "Idea Pitch"
         android:backgroundTint="@color/white"
         android:textColor="@color/black"/>
@@ -36,8 +38,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onShowAndTell1Click"
+        android:layout_marginTop="20dp"
         android:text = "Show and Tell 1"
         android:backgroundTint="@color/white"
         android:textColor="@color/black"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:onClick="onInformationBackClicked"
+        android:layout_marginTop="20dp"
+        android:minWidth="125dp"
+        android:text = "Back" />
 
 </LinearLayout>

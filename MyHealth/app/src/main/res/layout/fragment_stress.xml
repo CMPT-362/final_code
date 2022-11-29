@@ -222,15 +222,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
                     android:stepSize="1.0"
                     android:value="0.0"
                     android:valueFrom="0.0"
                     android:valueTo="10.0" />
 
             </LinearLayout>
-
-
-
 
     </ScrollView>
 

@@ -40,4 +40,8 @@ class InformationActivity : AppCompatActivity() {
         openURL.data = Uri.parse("https://www.youtube.com/watch?v=oVA249I5oaQ&t=35s")
         startActivity(openURL)
     }
+
+    fun onInformationBackClicked(view: View){
+        finish()
+    }
 }
