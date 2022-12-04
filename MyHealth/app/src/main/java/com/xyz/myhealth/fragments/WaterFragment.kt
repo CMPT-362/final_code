@@ -8,13 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.xyz.myhealth.R
-import com.xyz.myhealth.databinding.ActivityMainBinding
-import com.xyz.myhealth.schema.DrinkWater
-import com.xyz.myhealth.services.DrinkWaterService
-import java.time.LocalTime
+import com.xyz.myhealth.services.WaterService
 
 /***
  * This fragment is for User manually entering when he/she drank water
@@ -24,13 +19,6 @@ import java.time.LocalTime
 class WaterFragment : Fragment() {
     private lateinit var drinkIcon : ImageView
     private lateinit var drinkWater : Button
-
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var database: DatabaseReference
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,7 +43,7 @@ class WaterFragment : Fragment() {
     private fun onClickDrinkButton(view: View){
         drinkWater = view.findViewById(R.id.drinkWater)
         drinkWater.setOnClickListener(View.OnClickListener {
-            DrinkWaterService.addDrinkWater()
+            WaterService.addDrinkWater()
         })
 
     }

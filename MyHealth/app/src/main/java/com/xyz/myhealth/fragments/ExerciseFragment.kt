@@ -10,7 +10,6 @@ import android.widget.*
 import com.xyz.myhealth.R
 import com.xyz.myhealth.activities.CalorieEntryActivity
 import com.xyz.myhealth.activities.ManualEntryActivity
-import com.xyz.myhealth.activities.UserProfileActivity
 
 class ExerciseFragment : Fragment() {
 
@@ -19,10 +18,6 @@ class ExerciseFragment : Fragment() {
     private lateinit var automaticEntryButton : ImageView
 
     private lateinit var intent: Intent
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

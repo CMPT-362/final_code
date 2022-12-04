@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import com.xyz.myhealth.R
 import com.xyz.myhealth.activities.InformationActivity
 import com.xyz.myhealth.activities.UserProfileActivity
@@ -21,10 +20,6 @@ import com.xyz.myhealth.activities.UserProfileActivity
 class HomeFragment : Fragment() {
     private lateinit var userProfileButton : ImageView
     private lateinit var informationButton : ImageView
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

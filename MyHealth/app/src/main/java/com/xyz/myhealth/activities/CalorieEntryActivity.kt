@@ -31,11 +31,11 @@ class CalorieEntryActivity : AppCompatActivity() {
 
     private fun onCalorieEntrySaveClicked() {
         binding.calorieEntrySaveButton.setOnClickListener{
-            val foodItem = binding.foodItem.text.toString()
-            val foodCalorie = binding.foodCalorie.text.toString().toFloat()
 
-            CalorieService.addCalorieEntry(foodItem,foodCalorie)
-
+            CalorieService.addCalorieEntry(
+                binding.foodItem.text.toString(),
+                binding.foodCalorie.text.toString().toFloat()
+            )
             finish()
         }
     }

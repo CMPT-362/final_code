@@ -35,10 +35,6 @@ class StressFragment : Fragment() {
     private lateinit var slider9 : Slider
     private lateinit var slider10 : Slider
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
