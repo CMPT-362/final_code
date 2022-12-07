@@ -8,11 +8,15 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 import com.xyz.myhealth.databinding.ActivityCalorieEntryBinding
+import com.xyz.myhealth.services.AllTimeDataService
 
 import com.xyz.myhealth.services.CalorieService
-import com.xyz.myhealth.services.DailyUserDataService
 import com.xyz.myhealth.services.USER_PROFILE_TAG
 
+/**
+ * Calorie Entry Acitvity where the user inputs the food Item they have eaten
+ * and the amount of calories they have consumed
+ */
 class CalorieEntryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCalorieEntryBinding
@@ -37,7 +41,7 @@ class CalorieEntryActivity : AppCompatActivity() {
             database= FirebaseDatabase.getInstance().getReference("DailyUserData")
             database.child(email).get().addOnSuccessListener {
                 if(it.exists()){
-                    DailyUserDataService.addOrUpdateDailyUserData(
+                    AllTimeDataService.addOrUpdateDailyUserData(
                         email,
                         it.child("calorieIntake").value.toString().toFloat()+binding.foodCalorie.text.toString().toFloat(),
                         it.child("calorieLost").value.toString().toFloat(),

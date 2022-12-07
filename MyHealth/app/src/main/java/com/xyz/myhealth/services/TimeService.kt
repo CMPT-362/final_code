@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
 
+/**
+ * Time Stamp
+ */
 object TimeService {
     @SuppressLint("SimpleDateFormat")
     fun getTimeStamp():String{

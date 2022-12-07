@@ -1,5 +1,8 @@
 package com.xyz.myhealth.schema
 
+/**
+ * User Profile Schema
+ */
 data class UserProfile(
     val name: String? = null,
     val email: String? = null,

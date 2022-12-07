@@ -7,7 +7,10 @@ import com.xyz.myhealth.schema.DailyUserData
 
 private const val DAILY_USER_TAG = "DAILY_USER_TAG"
 
-object DailyUserDataService {
+/**
+ * Custom functions to store all time data
+ */
+object AllTimeDataService {
     fun addOrUpdateDailyUserData(
         email:String,
         calorieIntake: Float,

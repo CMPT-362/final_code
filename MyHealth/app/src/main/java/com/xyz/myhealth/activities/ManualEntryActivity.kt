@@ -6,10 +6,14 @@ import android.util.Log
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.xyz.myhealth.databinding.ActivityManualEntryBinding
+import com.xyz.myhealth.services.AllTimeDataService
 import com.xyz.myhealth.services.CalorieService
-import com.xyz.myhealth.services.DailyUserDataService
 import com.xyz.myhealth.services.USER_PROFILE_TAG
 
+/**
+ * Manual Activity where the user manually enters
+ * the activity they have performed with the relevant details
+ */
 class ManualEntryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityManualEntryBinding
 
@@ -22,6 +26,10 @@ class ManualEntryActivity : AppCompatActivity() {
         onManualEntryCancelClicked()
     }
 
+    /*
+     * Here first we are saving the calorie entry
+     * Then we are reading the DailyUserData and adding our changes then updating it
+     */
     private fun onManualEntrySaveClicked(email:String){
         binding.manualEntrySaveButton.setOnClickListener{
 
@@ -35,7 +43,7 @@ class ManualEntryActivity : AppCompatActivity() {
             val db : DatabaseReference = FirebaseDatabase.getInstance().getReference("DailyUserData")
             db.child(email).get().addOnSuccessListener {
                 if(it.exists()){
-                    DailyUserDataService.addOrUpdateDailyUserData(
+                    AllTimeDataService.addOrUpdateDailyUserData(
                         email,
                         it.child("calorieIntake").value.toString().toFloat(),
                         it.child("calorieLost").value.toString().toFloat()+binding.activityCaloriesLost.text.toString().toFloat(),
@@ -53,6 +61,7 @@ class ManualEntryActivity : AppCompatActivity() {
         }
     }
 
+    // cancel button
     private fun onManualEntryCancelClicked(){
         binding.manualEntryCancelButton.setOnClickListener{
             finish()

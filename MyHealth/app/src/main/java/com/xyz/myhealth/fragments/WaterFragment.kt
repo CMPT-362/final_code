@@ -17,7 +17,6 @@ import com.xyz.myhealth.services.WaterService
 
 /***
  * This fragment is for User manually entering when he/she drank water
- * GlassIcon - Starts DrinkHistoryActivity
  * Drink button - Enters Users time of when they drank water
  */
 class WaterFragment : Fragment() {

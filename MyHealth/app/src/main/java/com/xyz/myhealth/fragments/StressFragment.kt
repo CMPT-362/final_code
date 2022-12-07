@@ -15,7 +15,6 @@ import com.xyz.myhealth.services.StressService
 /**
  * This fragment is for seeing stress values of users
  * Save - Saves stress values of users
- * BarChartIcon - Opens activity for seeing graphs and history of previous stress values
  * Reset - Sets all slider values to zero
  */
 class StressFragment : Fragment() {

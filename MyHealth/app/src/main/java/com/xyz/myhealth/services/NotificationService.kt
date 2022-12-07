@@ -10,7 +10,9 @@ import androidx.core.app.NotificationCompat
 import com.xyz.myhealth.MainActivity
 import com.xyz.myhealth.R
 
-
+/**
+ * Notification service
+ */
 class NotificationService: Service(){
 
     override fun onCreate() {

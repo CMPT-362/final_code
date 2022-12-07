@@ -1,7 +1,8 @@
 package com.xyz.myhealth.schema
 
-import java.time.LocalTime
-
+/**
+ * Drink Water Schema
+ */
 data class DrinkWater(
     val email:String? = null,
     val timeStamp: String? = null

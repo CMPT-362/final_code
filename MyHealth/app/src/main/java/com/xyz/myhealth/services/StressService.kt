@@ -7,6 +7,9 @@ import com.xyz.myhealth.schema.Stress
 
 private const val STRESS_TAG = "STRESS"
 
+/**
+ * Custom functions to store stress entry of user
+ */
 object StressService {
     fun addStressEntry(email:String, stressValue: Int){
         val database: DatabaseReference = FirebaseDatabase.getInstance().getReference("Stress")
@@ -16,7 +19,7 @@ object StressService {
             db.child(email).get().addOnSuccessListener {
                 if(it.exists()){
                     if(stressValue < 34){
-                        DailyUserDataService.addOrUpdateDailyUserData(
+                        AllTimeDataService.addOrUpdateDailyUserData(
                             email,
                             it.child("calorieIntake").value.toString().toFloat(),
                             it.child("calorieLost").value.toString().toFloat(),
@@ -26,7 +29,7 @@ object StressService {
                         )
                     }
                     else if(stressValue < 67){
-                        DailyUserDataService.addOrUpdateDailyUserData(
+                        AllTimeDataService.addOrUpdateDailyUserData(
                             email,
                             it.child("calorieIntake").value.toString().toFloat(),
                             it.child("calorieLost").value.toString().toFloat(),
@@ -35,7 +38,7 @@ object StressService {
                             "mid"
                         )
                     } else {
-                        DailyUserDataService.addOrUpdateDailyUserData(
+                        AllTimeDataService.addOrUpdateDailyUserData(
                             email,
                             it.child("calorieIntake").value.toString().toFloat(),
                             it.child("calorieLost").value.toString().toFloat(),

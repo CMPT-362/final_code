@@ -21,7 +21,6 @@ import com.xyz.myhealth.services.USER_PROFILE_TAG
 /**
  * This fragment contains information of the Users today's data
  * UserIcon - Starts UserProfileActivity
- * HistoryIcon - Starts HomeHistoryActivity
  * InformationIcon - Starts InformationActivity
  */
 class HomeFragment : Fragment() {

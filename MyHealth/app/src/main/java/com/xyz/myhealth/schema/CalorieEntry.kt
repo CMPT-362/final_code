@@ -1,5 +1,8 @@
 package com.xyz.myhealth.schema
 
+/**
+ * Calorie Entry Schema
+ */
 data class CalorieEntry(
     val activityPerformed: String? = null,
     val activityDuration: Int? = null,

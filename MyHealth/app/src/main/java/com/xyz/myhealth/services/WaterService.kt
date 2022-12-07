@@ -6,6 +6,9 @@ import com.xyz.myhealth.schema.DrinkWater
 
 private const val TAG = "DRINK_WATER"
 
+/**
+ * Water services
+ */
 object WaterService {
     fun addDrinkWater(email:String){
         val database : DatabaseReference = FirebaseDatabase.getInstance().getReference("DrinkWater")
@@ -14,7 +17,7 @@ object WaterService {
             val db : DatabaseReference= FirebaseDatabase.getInstance().getReference("DailyUserData")
             db.child(email).get().addOnSuccessListener {
                 if(it.exists()){
-                    DailyUserDataService.addOrUpdateDailyUserData(
+                    AllTimeDataService.addOrUpdateDailyUserData(
                         email,
                         it.child("calorieIntake").value.toString().toFloat(),
                         it.child("calorieLost").value.toString().toFloat(),

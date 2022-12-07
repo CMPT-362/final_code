@@ -9,6 +9,9 @@ import java.util.*
 
 const val USER_PROFILE_TAG = "USER_PROFILE"
 
+/**
+ * Custom function for user related services
+ */
 object UserService {
 
     fun addOrUpdateUserProfile(name: String, email: String, age: Int, calorieGoal:Float, currentWeight:Float){

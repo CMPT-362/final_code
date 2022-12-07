@@ -9,6 +9,9 @@ import com.xyz.myhealth.schema.CalorieIntake
 private const val CALORIE_INTAKE_TAG = "CALORIE_INTAKE"
 private const val CALORIE_ENTRY_TAG = "CALORIE_ENTRY"
 
+/**
+ * Custom functions for storing calorie values in firebase
+ */
 object CalorieService {
     fun addCalorieEntry(email: String, foodItem: String, foodCalorie: Float){
         val database : DatabaseReference = FirebaseDatabase.getInstance().getReference("CalorieIntake")

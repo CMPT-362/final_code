@@ -12,6 +12,10 @@ import com.xyz.myhealth.activities.AutomaticCalorieEntryActivity
 import com.xyz.myhealth.activities.CalorieEntryActivity
 import com.xyz.myhealth.activities.ManualEntryActivity
 
+/**
+ * This is the calorie checker where the user inputs their calories
+ * in three ways: calorieEntry, CalorieIntake and AutomaticEntry
+ */
 class ExerciseFragment : Fragment() {
 
     private lateinit var calorieEntryButton : ImageView
