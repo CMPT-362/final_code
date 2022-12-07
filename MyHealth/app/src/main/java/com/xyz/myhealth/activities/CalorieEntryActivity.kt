@@ -2,6 +2,7 @@ package com.xyz.myhealth.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -12,6 +13,8 @@ import com.xyz.myhealth.databinding.ActivityCalorieEntryBinding
 import com.xyz.myhealth.schema.CalorieIntake
 import com.xyz.myhealth.schema.UserProfile
 import com.xyz.myhealth.services.CalorieService
+import com.xyz.myhealth.services.DailyUserDataService
+import com.xyz.myhealth.services.USER_PROFILE_TAG
 
 class CalorieEntryActivity : AppCompatActivity() {
 
@@ -25,17 +28,34 @@ class CalorieEntryActivity : AppCompatActivity() {
         binding = ActivityCalorieEntryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        onCalorieEntrySaveClicked()
+        onCalorieEntrySaveClicked("w@w")
         onCalorieEntryCancelClicked()
     }
 
-    private fun onCalorieEntrySaveClicked() {
+    private fun onCalorieEntrySaveClicked(email:String) {
         binding.calorieEntrySaveButton.setOnClickListener{
-
             CalorieService.addCalorieEntry(
+                email,
                 binding.foodItem.text.toString(),
                 binding.foodCalorie.text.toString().toFloat()
             )
+            database= FirebaseDatabase.getInstance().getReference("DailyUserData")
+            database.child(email).get().addOnSuccessListener {
+                if(it.exists()){
+                    DailyUserDataService.addOrUpdateDailyUserData(
+                        email,
+                        it.child("calorieIntake").value.toString().toFloat()+binding.foodCalorie.text.toString().toFloat(),
+                        it.child("calorieLost").value.toString().toFloat(),
+                        it.child("netCalorieGain").value.toString().toFloat()+binding.foodCalorie.text.toString().toFloat(),
+                        it.child("glassOfWater").value.toString().toInt(),
+                        it.child("stress").value.toString()
+                    )
+
+                }
+                Log.i(USER_PROFILE_TAG,"Stress was Read")
+            }.addOnFailureListener {
+                Log.e(USER_PROFILE_TAG,"Stress was not Read")
+            }
             finish()
         }
     }

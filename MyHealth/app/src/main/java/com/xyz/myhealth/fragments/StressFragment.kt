@@ -1,5 +1,6 @@
 package com.xyz.myhealth.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,8 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.slider.Slider
 import com.xyz.myhealth.R
+import com.xyz.myhealth.activities.ManualEntryActivity
+import com.xyz.myhealth.activities.StressHistoryActivity
 import com.xyz.myhealth.services.StressService
 
 /**
@@ -35,6 +38,8 @@ class StressFragment : Fragment() {
     private lateinit var slider9 : Slider
     private lateinit var slider10 : Slider
 
+    private lateinit var intent: Intent
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,7 +60,7 @@ class StressFragment : Fragment() {
         saveButton.setOnClickListener(View.OnClickListener {
             val stressValue : Int = getAllSliderValue(view)
             setAllSliderToDefault(view)
-            StressService.addStressEntry(stressValue)
+            StressService.addStressEntry("w@w",stressValue)
         })
     }
 
@@ -63,7 +68,8 @@ class StressFragment : Fragment() {
     private fun onStressHistoryClicked(view: View){
         stressHistory = view.findViewById(R.id.stressHistory)
         stressHistory.setOnClickListener(View.OnClickListener {
-            Toast.makeText(this.context, "You clicked on StressHistory", Toast.LENGTH_SHORT).show()
+            intent = Intent(context, StressHistoryActivity::class.java)
+            startActivity(intent)
         })
     }
 
@@ -72,7 +78,6 @@ class StressFragment : Fragment() {
         resetButton = view.findViewById(R.id.stressReset)
         resetButton.setOnClickListener(View.OnClickListener {
             setAllSliderToDefault(view)
-            Toast.makeText(this.context, "You clicked on ResetButton", Toast.LENGTH_SHORT).show()
         })
     }
 

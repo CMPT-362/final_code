@@ -1,6 +1,7 @@
 package com.xyz.myhealth.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.xyz.myhealth.R
+import com.xyz.myhealth.services.USER_PROFILE_TAG
 import com.xyz.myhealth.services.WaterService
 
 /***
@@ -28,7 +32,7 @@ class WaterFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_water, container, false)
 
         onClickDrinkIcon(view)
-        onClickDrinkButton(view)
+        onClickDrinkButton(view, "w@w")
 
         return view;
     }
@@ -40,10 +44,10 @@ class WaterFragment : Fragment() {
         })
     }
 
-    private fun onClickDrinkButton(view: View){
+    private fun onClickDrinkButton(view: View, email:String){
         drinkWater = view.findViewById(R.id.drinkWater)
         drinkWater.setOnClickListener(View.OnClickListener {
-            WaterService.addDrinkWater()
+            WaterService.addDrinkWater(email)
         })
 
     }

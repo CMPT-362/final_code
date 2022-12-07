@@ -10,7 +10,7 @@
     <string name="calorie_entry_food_item">Food Item</string>
     <string name="calorie_entry_food_item_hint">Enter the food item eaten</string>
     <string name="calorie_entry_food_calorie">Food Calorie (cal)</string>
-    <string name="calorie_entry_food_calorie_hint">Enter the amount of calories consumed</string>
+    <string name="calorie_entry_food_calorie_hint">Enter the amount of calories consumed (cal)</string>
 
     <!--    MANUAL ENTRY-->
     <string name="manual_entry_header">Manual Entry</string>

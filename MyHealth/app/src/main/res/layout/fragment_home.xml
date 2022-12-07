@@ -37,12 +37,13 @@
                 android:textStyle=""/>
 
             <TextView
+                android:id="@+id/homeCalorieIntake"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
                 android:text="123123"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -59,15 +60,16 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text = "Calorie Lost"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/homeCalorieLost"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
                 android:text="123123"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -84,15 +86,16 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text = "Calorie Gain"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/homeCalorieGain"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
                 android:text="0"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -109,15 +112,16 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text = "Glasses of Water"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/homeGlassOfWater"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
                 android:text="4"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -137,12 +141,13 @@
                 android:textSize="18dp"/>
 
             <TextView
+                android:id="@+id/homeStress"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
                 android:text="Low"
-                android:textSize="18dp"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
