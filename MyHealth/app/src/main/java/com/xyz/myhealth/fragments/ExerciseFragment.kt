@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.xyz.myhealth.R
+import com.xyz.myhealth.activities.AutomaticCalorieEntryActivity
 import com.xyz.myhealth.activities.CalorieEntryActivity
 import com.xyz.myhealth.activities.ManualEntryActivity
 
@@ -41,7 +42,8 @@ class ExerciseFragment : Fragment() {
 
         automaticEntryButton = view.findViewById(R.id.automaticEntryIcon)
         automaticEntryButton.setOnClickListener(View.OnClickListener {
-            Toast.makeText(this.context, "You clicked on AutomaticEntry", Toast.LENGTH_SHORT).show()
+            intent = Intent(context, AutomaticCalorieEntryActivity::class.java)
+            startActivity(intent)
         })
 
         return view;

@@ -1,8 +1,7 @@
 package com.xyz.myhealth.services
 
 import android.util.Log
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.xyz.myhealth.schema.DrinkWater
 
 private const val TAG = "DRINK_WATER"

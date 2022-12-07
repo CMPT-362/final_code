@@ -1,5 +1,7 @@
 package com.xyz.myhealth.activities
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,11 +25,11 @@ class UserProfileActivity : AppCompatActivity() {
 
         readUserData("w@w")
 
-        onUserProfileSaveClick()
+        onUserProfileSaveClick(binding.profileEmail.text.toString())
         onUserProfileCancelClick()
     }
 
-    private fun onUserProfileSaveClick(){
+    private fun onUserProfileSaveClick(email:String){
         binding.userProfileSaveButton.setOnClickListener{
             UserService.addOrUpdateUserProfile(
                 binding.profileName.text.toString(),

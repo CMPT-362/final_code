@@ -40,7 +40,7 @@ class ManualEntryActivity : AppCompatActivity() {
                         it.child("calorieIntake").value.toString().toFloat(),
                         it.child("calorieLost").value.toString().toFloat()+binding.activityCaloriesLost.text.toString().toFloat(),
                         it.child("netCalorieGain").value.toString().toFloat()-binding.activityCaloriesLost.text.toString().toFloat(),
-                        it.child("glassOfWater").value.toString().toInt()+1,
+                        it.child("glassOfWater").value.toString().toInt(),
                         it.child("stress").value.toString()
                     )
 

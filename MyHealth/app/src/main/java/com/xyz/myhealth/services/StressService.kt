@@ -45,9 +45,8 @@ object StressService {
                         )
                     }
                 }
-                Log.i(USER_PROFILE_TAG,"Stress was Read")
             }.addOnFailureListener {
-                Log.e(USER_PROFILE_TAG,"Stress was not Read")
+                Log.e(STRESS_TAG,"Stress was not Read")
             }
             Log.i(STRESS_TAG,"Stress was Saved")
         }.addOnFailureListener {

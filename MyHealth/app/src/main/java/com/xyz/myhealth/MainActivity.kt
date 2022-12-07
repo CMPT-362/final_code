@@ -1,5 +1,8 @@
 package com.xyz.myhealth
 
+import android.app.ActivityManager
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -8,6 +11,8 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.xyz.myhealth.fragments.*
 import com.xyz.myhealth.fragments.adapter.MyFragmentStateAdapter
+import com.xyz.myhealth.services.AutomaticCalorieService
+import com.xyz.myhealth.services.NotificationService
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,11 +47,27 @@ class MainActivity : AppCompatActivity() {
             }
         tabLayoutMediator = TabLayoutMediator(tabLayout, viewPager2, tabConfigurationStrategy)
         tabLayoutMediator.attach()
+        if (!isMyServiceRunning()){
+            val serviceIntent = Intent(this, NotificationService::class.java)
+            startService(serviceIntent)
+        }
     }
 
     override fun onDestroy() {
         super.onDestroy()
         tabLayoutMediator.detach()
     }
+
+    fun isMyServiceRunning() :Boolean{
+        val manager:ActivityManager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        for (service in manager.getRunningServices(Int.MAX_VALUE)) {
+            if (NotificationService::class.java.getName() == service.service.className) {
+                return true
+            }
+        }
+        return false
+    }
+
+
 
 }

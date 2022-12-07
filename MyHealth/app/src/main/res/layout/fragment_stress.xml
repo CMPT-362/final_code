@@ -39,14 +39,6 @@
                         android:text = "Save"
                         android:onClick="onStressSaveClicked"/>
 
-                    <ImageView
-                        android:id="@+id/stressHistory"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_baseline_bar_chart_24"
-                        android:clickable="true"/>
-
                     <Button
                         android:id="@+id/stressReset"
                         android:layout_width="0dp"

@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Save"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:minWidth="125dp" />
 
                 <Button
@@ -120,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cancel"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:minWidth="125dp"/>
 
             </LinearLayout>

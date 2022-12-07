@@ -14,10 +14,6 @@ import com.xyz.myhealth.R
  */
 class InformationActivity : AppCompatActivity() {
 
-    private lateinit var websiteButton: Button
-    private lateinit var ideaPitchButton: Button
-    private lateinit var showAndTell1Button: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information)
@@ -38,6 +34,12 @@ class InformationActivity : AppCompatActivity() {
     fun onShowAndTell1Click(view: View){
         val openURL = Intent(android.content.Intent.ACTION_VIEW)
         openURL.data = Uri.parse("https://www.youtube.com/watch?v=oVA249I5oaQ&t=35s")
+        startActivity(openURL)
+    }
+
+    fun onShowAndTell2Click(view: View){
+        val openURL = Intent(android.content.Intent.ACTION_VIEW)
+        openURL.data = Uri.parse("https://www.youtube.com/watch?v=pPqIAxNsqtI")
         startActivity(openURL)
     }
 

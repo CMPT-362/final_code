@@ -3,23 +3,18 @@ package com.xyz.myhealth.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.TextView
-import android.widget.Toast
+
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.xyz.myhealth.R
+
 import com.xyz.myhealth.databinding.ActivityCalorieEntryBinding
-import com.xyz.myhealth.schema.CalorieIntake
-import com.xyz.myhealth.schema.UserProfile
+
 import com.xyz.myhealth.services.CalorieService
 import com.xyz.myhealth.services.DailyUserDataService
 import com.xyz.myhealth.services.USER_PROFILE_TAG
 
 class CalorieEntryActivity : AppCompatActivity() {
 
-    private lateinit var foodItem: TextView
-    private lateinit var foodCalorie: TextView
     private lateinit var binding: ActivityCalorieEntryBinding
     private lateinit var database: DatabaseReference
 

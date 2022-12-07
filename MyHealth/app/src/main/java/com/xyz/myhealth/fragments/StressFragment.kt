@@ -8,11 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
 import com.google.android.material.slider.Slider
 import com.xyz.myhealth.R
-import com.xyz.myhealth.activities.ManualEntryActivity
-import com.xyz.myhealth.activities.StressHistoryActivity
 import com.xyz.myhealth.services.StressService
 
 /**
@@ -48,7 +45,6 @@ class StressFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_stress, container, false)
 
         onStressSaveClicked(view)
-        onStressHistoryClicked(view)
         onStressResetClicked(view)
 
         return view;
@@ -61,15 +57,6 @@ class StressFragment : Fragment() {
             val stressValue : Int = getAllSliderValue(view)
             setAllSliderToDefault(view)
             StressService.addStressEntry("w@w",stressValue)
-        })
-    }
-
-    // when bar chart icon is clicked
-    private fun onStressHistoryClicked(view: View){
-        stressHistory = view.findViewById(R.id.stressHistory)
-        stressHistory.setOnClickListener(View.OnClickListener {
-            intent = Intent(context, StressHistoryActivity::class.java)
-            startActivity(intent)
         })
     }
 

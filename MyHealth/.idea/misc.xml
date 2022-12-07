@@ -3,20 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_automatic_calorie_entry.xml" value="0.13728470111448834" />
         <entry key="app/src/main/res/layout/activity_calorie_entry.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home_history.xml" value="0.15942028985507245" />
         <entry key="app/src/main/res/layout/activity_information.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_manual_entry.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.2833333333333333" />
-        <entry key="app/src/main/res/layout/activity_stress_history.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_stress_history.xml" value="0.14463019250253292" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.2467866323907455" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2536468505859375" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.14463019250253292" />
         <entry key="app/src/main/res/layout/fragment_stress.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_water.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/listview_stress.xml" value="0.29739583333333336" />
       </map>
     </option>
   </component>
@@ -24,6 +24,6 @@
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
-    <option name="id" value="Android" />
+    <option name="id" value="jpab" />
   </component>
 </project>
